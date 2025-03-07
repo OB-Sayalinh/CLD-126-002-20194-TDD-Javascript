@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "salary": "./salary.js"
+          }
+        }
+    </script>
+
+    <script type="module">
+
+    import { paySalary } from 'salary'
+
+    let button = document.getElementById('payButton');
+
+    button.addEventListener('click', () => {paySalary()})
+    
+    </script>
+
+</head>
+<body>
+
+    <input id="name" value="OB Sayalinh"></input>
+
+    <input id="hours" value=50></input>
+
+    <br>
+
+    <span id="pay">0</span>
+
+    <br>
+
+    <button id="payButton">Confirm</button>
+
+</body>
+</html>
